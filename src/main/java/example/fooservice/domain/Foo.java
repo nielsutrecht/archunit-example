@@ -1,9 +1,14 @@
 package example.fooservice.domain;
 
-public class Foo {
-    public final String foo;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public Foo(String foo) {
-        this.foo = foo;
-    }
+import java.io.Serializable;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Foo implements Serializable {
+    private String foo;
 }
