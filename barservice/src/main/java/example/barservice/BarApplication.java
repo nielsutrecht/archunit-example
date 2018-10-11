@@ -13,6 +13,6 @@ public class BarApplication extends ServiceBase {
     }
 
     public static void main(String... argv) {
-        new BarApplication(8080).start();
+        new BarApplication(8081).start();
     }
 }

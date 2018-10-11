@@ -4,6 +4,8 @@ import example.fooservice.domain.Foo;
 import example.fooservice.repository.FooRepository;
 import org.springframework.stereotype.Service;
 
+import static example.fooservice.util.ServiceUtil.createFoo;
+
 @Service
 public class FooService {
     private final FooRepository fooRepository;
@@ -13,6 +15,6 @@ public class FooService {
     }
 
     public Foo getFoo() {
-        return new Foo("Foo #" + fooRepository.nextFoo());
+        return createFoo(fooRepository.nextFoo());
     }
 }
